@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TasteBuds Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #fff;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') no-repeat center/cover;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    /* Menu Section with Float */
+    .menu-section {
+      overflow: auto;
+      padding: 30px 20px;
+    }
+
+    .menu-left {
+      float: left;
+      width: 40%;
+    }
+
+    .menu-right {
+      float: right;
+      width: 55%;
+    }
+
+    .menu-left h2,
+    .menu-right h2 {
+      margin-bottom: 15px;
+      color: #b34d4d;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Gallery with Flex */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 30px 20px;
+      background-color: #f9f9f9;
+    }
+
+    .gallery img {
+      width: calc(33.333% - 10px);
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* Feedback Form */
+    .feedback {
+      padding: 30px 20px;
+      background: #fff7f0;
+    }
+
+    .feedback h2 {
+      color: #b34d4d;
+      margin-bottom: 20px;
+    }
+
+    .feedback form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+    }
+
+    .feedback input, .feedback textarea, .feedback select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    .feedback button {
+      width: fit-content;
+      padding: 10px 20px;
+      background-color: #b34d4d;
+      color: rgb(245, 239, 239);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    @media (max-width: 768px) {
+      .menu-left, .menu-right {
+        float: none;
+        width: 100%;
+      }
+
+      .gallery img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>TasteBuds Restaurant</h1>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#feedback">Feedback</a>
+    </nav>
+  </header>
+
+  <!-- Menu -->
+  <section id="menu" class="menu-section">
+    <div class="menu-left">
+      <h2>Veg Dishes</h2>
+      <ul>
+        <li><strong>Paneer Butter Masala</strong> - Rich & creamy</li>
+        <li><em>Chole Bhature</em> - Spicy & tangy</li>
+        <li>Veg Biryani</li>
+      </ul>
+    </div>
+    <div class="menu-right">
+      <h2>Non-Veg Dishes</h2>
+      <ol>
+        <li><strong>Chicken Tikka</strong> - Tandoori perfection</li>
+        <li>Mutton Rogan Josh</li>
+        <li>Fish Curry</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="gallery">
+    <img src="c:\Users\Admin\Downloads\paneer-butter-masala-5.webp" alt="food1">
+    <img src="c:\Users\Admin\Downloads\Chole-puri-thali-WS.jpg" alt="food2">
+    <img src="c:\Users\Admin\Downloads\hq720.jpg" alt="food3">
+    <img src="c:\Users\Admin\Downloads\chicken-tikka-kebab-recipe.webp" alt="food4">
+    <img src="c:\Users\Admin\Downloads\1-13-2-500x500.jpg" alt="food5">
+    <img src="c:\Users\Admin\Downloads\Kerala-Fish-Curry.jpg" alt="food6">
+  </section>
+
+  <!-- Feedback Form -->
+  <section id="feedback" class="feedback">
+    <h2>Leave Your Feedback</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="tel" name="contact" placeholder="Contact Number" required />
+      <select name="rating">
+        <option value="">Rate Us</option>
+        <option value="5">Excellent</option>
+        <option value="4">Very Good</option>
+        <option value="3">Good</option>
+        <option value="2">Average</option>
+        <option value="1">Poor</option>
+      </select>
+      <textarea name="suggestions" rows="4" placeholder="Suggestions..."></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 TasteBuds Restaurant | Designed with ♥
+  </footer>
+
+</body>
+</html>
